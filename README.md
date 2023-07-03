@@ -1,3 +1,3 @@
-立ち上げから
+立ち上げかた
 
 docker-compose up
