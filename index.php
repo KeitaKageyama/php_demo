@@ -14,6 +14,6 @@
     <?php
         echo "ABCDE";
     ?>
-    <H1>PHP code here</H1>
+    <H1>PHP code e</H1>
 </body>
 </html>
