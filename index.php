@@ -12,7 +12,7 @@
 </head>
 <body>
     <?php
-        print "ABCDE";
+        echo "ABCDE";
     ?>
     <H1>PHP code here</H1>
 </body>
