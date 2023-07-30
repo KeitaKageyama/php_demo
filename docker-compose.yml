@@ -9,7 +9,6 @@ services:
       - 8660:80
     container_name: php7.2-trial2
   mysql:
-    platform: linux/x86_64 #Mac M1
     image: mysql:5.7
     volumes:
       - /var/lib/mysql
@@ -19,3 +18,17 @@ services:
       - MYSQL_USER=test
       - MYSQL_PASSWORD=test
     container_name: mysql5.7-trial2
+
+   phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mysql #mysqlサービス名を指定
+      - PMA_USER=root
+      - PMA_PASSWORD=root
+    links:
+      - mysql
+    ports:
+      - 4040:80
+    volumes:
+      - ./phpmyadmin/sessions:/sessions
