@@ -11,8 +11,7 @@
      </style>
 </head>
 <body>
-<?php
-        
+    <?php
         $data = ['name' => '玉ねぎ', 'price' => 200, 'santi' => '北海道'];
         
         foreach ($data as $key => $value){
@@ -27,10 +26,7 @@
 
             echo"{$keyname} : {$value}<br>";
         }
-        
-
-
-        ?>
+    ?>
     <H1>PHP code e</H1>
 </body>
 </html>
