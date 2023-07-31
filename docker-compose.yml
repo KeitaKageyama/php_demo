@@ -18,8 +18,7 @@ services:
       - MYSQL_USER=test
       - MYSQL_PASSWORD=test
     container_name: mysql5.7-trial2
-
-   phpmyadmin:
+  phpmyadmin:
     image: phpmyadmin/phpmyadmin
     environment:
       - PMA_ARBITRARY=1
