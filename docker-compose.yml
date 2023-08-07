@@ -2,12 +2,15 @@ version: "3"
 
 services:
   php:
-    image: php:7.2-apache
+    build: .
+    container_name: "php74-1"
     volumes:
-      - .:/var/www/html
+      - "./html/:/var/www/html"
+    privileged: true
     ports:
-      - 8660:80
-    container_name: php7.2-trial2
+      - "8660:80"
+    depends_on:
+      - mysql
   mysql:
     image: mysql:5.7
     volumes:
